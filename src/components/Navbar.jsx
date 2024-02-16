@@ -24,13 +24,13 @@ export default function Navbar() {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200"
             >
-                {navlinks.map(({id, link, text}) => {return <li key={id}>{text}</li>})}
+                {navlinks.map(({id, link, text}) => {return <NavLink to={link} key={id}>{text}</NavLink>})}
             </ul>
           </div>
         </div>
         <div className="navbar-center">
             <ul className="menu menu-horizontal">
-              {navlinks.map(({id, link, text}) => <li key={id} className="mr-3">{text}</li>)}
+              {navlinks.map(({id, link, text}) => {return <NavLink to={link} key={id}>{text}</NavLink>})}
             </ul>
         </div>
         <div className="navbar-end">
